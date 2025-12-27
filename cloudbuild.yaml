@@ -6,23 +6,23 @@ steps:
   args:
     - build
     - '-t'
-    - us-west1 (Oregon)-docker.pkg.dev/$PROJECT_ID/mldockerimg/mlflow-api:$SHORT_SHA
+    - us-west1-docker.pkg.dev/$PROJECT_ID/mldockerimg/mlflow-api:$SHORT_SHA
     - '.'
 
 - name: 'gcr.io/cloud-builders/docker'
   args:
     - push
-    - us-west1 (Oregon)-docker.pkg.dev/$PROJECT_ID/mldockerimg/mlflow-api:$SHORT_SHA
+    - us-west1-docker.pkg.dev/$PROJECT_ID/mldockerimg/mlflow-api:$SHORT_SHA
 
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   args:
     - run
     - deploy
     - gcpmlflow
-    - --image=us-west1 (Oregon)-docker.pkg.dev/$PROJECT_ID/mldockerimg/mlflow-api:$SHORT_SHA
-    - --region=us-west1 (Oregon)
+    - --image=us-west1-docker.pkg.dev/$PROJECT_ID/mldockerimg/mlflow-api:$SHORT_SHA
+    - --region=us-west1
     - --platform=managed
     - --allow-unauthenticated
 
 images:
-- us-west1 (Oregon)-docker.pkg.dev/$PROJECT_ID/mldockerimg/mlflow-api:$SHORT_SHA
+- us-west1-docker.pkg.dev/$PROJECT_ID/mldockerimg/mlflow-api:$SHORT_SHA
