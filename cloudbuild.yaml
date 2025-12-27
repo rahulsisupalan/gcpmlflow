@@ -15,6 +15,7 @@ steps:
     - us-west1-docker.pkg.dev/$PROJECT_ID/mldockerimg/mlflow-api:$SHORT_SHA
 
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
   args:
     - run
     - deploy
