@@ -12,7 +12,7 @@ COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
 # Expose port
-EXPOSE 5000
+EXPOSE 8080
 
 # Run Flask app with Gunicorn
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "flaskApi:app"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8080", "flaskApi:app"]
