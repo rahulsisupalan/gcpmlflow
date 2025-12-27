@@ -11,7 +11,7 @@ logging.basicConfig(
 
 modelfolder = "app/model"
 modelname = "winemodel"
-version = "v1"
+version = "v1" 
 
 app = Flask(__name__)
 
