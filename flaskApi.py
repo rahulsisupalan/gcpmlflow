@@ -11,7 +11,7 @@ logging.basicConfig(
     format="%(asctime)s %(levelname)s %(message)s"
 )
 
-modelfolder = "R:/mlops/model"
+modelfolder = "/app/model/"
 modelname = "winemodel"
 version = "v1" 
 
