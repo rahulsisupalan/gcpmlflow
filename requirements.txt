@@ -3,4 +3,4 @@ gunicorn
 numpy
 scikit-learn
 joblib
-Flask-JWT-Extended
+Flask-JWT-Extended 
